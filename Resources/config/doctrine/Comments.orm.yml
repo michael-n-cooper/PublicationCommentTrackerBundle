@@ -1,0 +1,32 @@
+W3C\PublicationCommentTrackerBundle\Entity\Comments:
+    type: entity
+    table: comments
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+            options: 
+                unsigned: true
+    fields:
+        svid:
+            type: integer
+            nullable: false
+            options: 
+                unsigned: true
+        wgid:
+            type: integer
+            options: 
+                unsigned: true
+        uid:
+            type: integer
+            nullable: false
+            options: 
+                unsigned: true
+        label:
+            type: string
+            length: 250
+    oneToMany:
+        commenthistory:
+            targetEntity: CommentHistory
+            mappedBy: commenthistory

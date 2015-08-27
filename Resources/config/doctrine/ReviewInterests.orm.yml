@@ -1,0 +1,16 @@
+W3C\PublicationCommentTrackerBundle\Entity\ReviewInterests:
+    type: entity
+    table: reviewinterests
+    id:
+        id:
+            type: smallint
+            generator:
+                strategy: AUTO
+    fields:
+        interest:
+            type: string
+            length: 250
+    oneToMany:
+        userknowledge:
+            targetEntity: UserKnowledge
+            mappedBy: userknowledge

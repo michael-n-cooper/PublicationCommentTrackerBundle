@@ -1,0 +1,8 @@
+W3C\PublicationCommentTrackerBundle\Entity\RegisteredGroups:
+    type: entity
+    table: reviews
+    id:
+        id:
+            type: integer
+            options: 
+                unsigned: true

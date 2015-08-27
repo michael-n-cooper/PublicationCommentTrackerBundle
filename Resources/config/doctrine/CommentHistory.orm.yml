@@ -1,0 +1,37 @@
+W3C\PublicationCommentTrackerBundle\Entity\CommentHistory:
+    type: entity
+    table: comment_history
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+            options: 
+                unsigned: true
+    fields:
+        cid:
+            type: integer
+            options: 
+                unsigned: true
+        status:
+            type: comment_status
+        disposition:
+            type: comment_response
+        acknowledgement:
+            type: comment_response
+        notes:
+            type: text
+        changedby:
+            type: string
+            length: 40
+        timestamp:
+            type: datetime
+            columnDefinition: TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    manyToOne:
+        comment:
+            targetEntity: Comments
+            inversedBy: commenthistory
+            joinColumn:
+                name: cid
+                referenceColumnName: id
+            

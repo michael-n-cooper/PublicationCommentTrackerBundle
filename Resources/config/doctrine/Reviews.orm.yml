@@ -1,0 +1,32 @@
+W3C\PublicationCommentTrackerBundle\Entity\Reviews:
+    type: entity
+    table: reviews
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+            options: 
+                unsigned: true
+    fields:
+        svid:
+            type: integer
+            nullable: false
+            options: 
+                unsigned: true
+        wgid:
+            type: integer
+            options: 
+                unsigned: true
+        uid:
+            type: integer
+            nullable: false
+            options: 
+                unsigned: true
+        outcome:
+            type: review_outcome
+        notes:
+            type: text
+        timestamp:
+            type: datetime
+            columnDefinition: TIMESTAMP DEFAULT CURRENT_TIMESTAMP

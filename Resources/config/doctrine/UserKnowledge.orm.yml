@@ -1,0 +1,28 @@
+W3C\PublicationCommentTrackerBundle\Entity\UserKnowledge:
+    type: entity
+    table: user_knowledge
+    id:
+        id:
+            type: integer
+            generator:
+                strategy: AUTO
+            options: 
+                unsigned: true
+    fields:
+        uid:
+            type: integer
+            options: 
+                unsigned: true
+        riid:
+            type: smallint
+        sgid:
+            type: string
+            length: 255
+    manyToOne:
+        reviewInterest:
+            targetEntity: ReviewInterests
+            inversedBy: userknowledge
+            joinColumn:
+                name: riid
+                referenceColumnName: id
+            

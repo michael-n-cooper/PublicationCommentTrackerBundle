@@ -1,0 +1,7 @@
+parameters:
+#    w3_c_publication_comment_tracker.example.class: W3C\PublicationCommentTrackerBundle\Example
+
+services:
+#    w3_c_publication_comment_tracker.example:
+#        class: %w3_c_publication_comment_tracker.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
